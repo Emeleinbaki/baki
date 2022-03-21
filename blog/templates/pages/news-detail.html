@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <section class="about">
+        <div class="container">
+            <div class="inner">
+                <div class="bread-crumbs">
+                    <a href="{% url 'index' %}" class="link">Главная /</a> <span class="cur-link">Новости</span>
+                </div>
+                <div class="news-grid">
+                    <h1 class="title">{{ new.title }}</h1>
+                    <img src="{{ new.image.url }}" style="max-width: 960px;" alt="">
+                    <p class="text">
+                    <p>{{ new.description }}</p>
+                    <div class="equipment-grid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
